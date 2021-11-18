@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
 
 html, body {
     font-family: 'Raleway', sans-serif;
@@ -8,20 +9,28 @@ html, body {
 }
 body {
     width: 100%;
+    height: 100vh;
+    position: relative;
     background-image: url(../images/bg-mobile.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+.desktop-mobile {
+    width: 100%;
+    margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 .section-main { 
-    margin-top: 50%;
-    margin-bottom: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+  }
 .section-main--container1, .section-main--container2 {
-    width: 90%;
+    width: 84%;
     background-color: hsl(228, 56%, 26%);
     border-radius: 10px;
     color: hsl(243, 100%, 93%);
@@ -78,11 +87,77 @@ body {
     width: 12px;
     height: 12px;
     top: 4px;
-    left: 70%;
+    left: 75%;
+    margin-left: -16px;
     background-color: #fff;
     z-index: 20;
 
 }
-.section-main--container2-label {
-    
+.section-main--container3 {
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+    border-radius: 10px;   
+    margin-top: -40px;
+    z-index: 30;
+}
+
+.section-main--container3 span{
+    color: hsl(229, 57%, 11%);
+    font-size: 40px;
+    line-height: 100%;
+}
+.section-main--container3-sup{
+    color: hsl(229, 7%, 55%);
+    font-variant: small-caps;
+    font-size: 12px;
+}
+
+@media (min-width: 1024px) {
+    body {
+        width: 100%;
+        height: 100vh;
+        background-image: none;
+        background-color: hsl(229, 57%, 11%);
+        background-image: url(./images/bg-desktop.png);
+        background-repeat: no-repeat;
+         background-size: auto 50%;
+        background-position: bottom; 
+    }
+    .desktop-mobile {
+        
+    }
+    .section-main { 
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* align-items: flex-end; */
+        justify-content: center;
+        }
+      .section-main--container1  {
+          width: 25%;
+          margin-right: 2%;
+      }
+      .section-main--container2
+      {
+        width: 40%;
+        align-self: flex-end;
+          
+      }
+      .section-main--container2 p{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+          text-align: left !important;
+      }
+      .section-main--container3 {
+       width: 12%;
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: 1px;
+        border-radius: 10px;   
+        margin-top: -270px !important; 
+        margin-left: 47%;
+        z-index: 30;
+    }
 }
